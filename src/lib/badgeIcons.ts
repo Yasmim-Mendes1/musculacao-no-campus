@@ -1,0 +1,27 @@
+import { Target, Award, Trophy, Flame, Dumbbell, Medal, Crown, Star, Zap, Heart, Shield, Gem } from "lucide-react";
+
+export const BADGE_ICONS: Record<string, React.ElementType> = {
+  first_workout:  Target,
+  "10_workouts":  Award,
+  "50_workouts":  Trophy,
+  "100_workouts": Crown,
+  "200_workouts": Medal,
+  "7_streak":     Flame,
+  "14_streak":    Star,
+  "30_streak":    Gem,
+  "60_streak":    Shield,
+  no_rest_day:    Flame,
+  monday_warrior: Dumbbell,
+  early_bird:     Zap,
+  night_owl:      Gem,
+  weekend_beast:  Flame,
+  comeback:       Shield,
+  speed_run:      Zap,
+  all_sets:       Medal,
+  heavy_lifter:   Crown,
+  perfectionist:  Trophy,
+  social:         Heart,
+  level_5:        Star,
+  level_10:       Crown,
+  perfect_week:   Trophy,
+};

@@ -1,0 +1,99 @@
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+@import '@fontsource/poppins/800.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+
+    --primary: 78 58% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 78 40% 92%;
+    --secondary-foreground: 78 58% 30%;
+
+    --muted: 220 15% 93%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 45 100% 60%;
+    --accent-foreground: 45 100% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 78 58% 48%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --xp: 270 60% 55%;
+    --xp-foreground: 0 0% 100%;
+    --streak: 25 95% 55%;
+    --streak-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50 shadow-lg;
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(78 58% 48%), hsl(78 58% 58%));
+  }
+  .gradient-xp {
+    background: linear-gradient(135deg, hsl(270 60% 55%), hsl(290 60% 60%));
+  }
+  .gradient-streak {
+    background: linear-gradient(135deg, hsl(25 95% 55%), hsl(38 92% 50%));
+  }
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(78 58% 48%), hsl(78 58% 38%));
+  }
+}
+
+html, body, * {
+  font-family: 'Poppins', sans-serif !important;
+}
